@@ -1,18 +1,28 @@
-// Lista de claves permitidas para la validación
-const validKeys = ['ABC123', 'DEF456'];
+// Lista de claves permitidas
+const validKeys = ["ABC123", "DEF456"];
 
-// Función para validar una clave
-function validateKey(key) {
-    return validKeys.includes(key);
+function validateKey() {
+    let key = document.getElementById("keyInput").value;
+    let resultText = document.getElementById("result");
+
+    if (validKeys.includes(key)) {
+        resultText.innerHTML = "<span style='color:green;'>Acceso permitido</span>";
+    } else {
+        resultText.innerHTML = "<span style='color:red;'>Acceso denegado</span>";
+    }
 }
 
-// Crear un endpoint de API en el navegador
-self.onmessage = function (event) {
-    const key = event.data.key;
+// Validación a través de URL con parámetro ?key=
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const key = urlParams.get("key");
 
-    if (validateKey(key)) {
-        self.postMessage({ status: 'ok', message: 'Acceso permitido' });
-    } else {
-        self.postMessage({ status: 'error', message: 'Acceso denegado' });
+    if (key) {
+        let resultText = document.getElementById("result");
+        if (validKeys.includes(key)) {
+            resultText.innerHTML = "<span style='color:green;'>Acceso permitido</span>";
+        } else {
+            resultText.innerHTML = "<span style='color:red;'>Acceso denegado</span>";
+        }
     }
 };
