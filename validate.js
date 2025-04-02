@@ -5,10 +5,10 @@ window.onload = function() {
     const urlParams = new URLSearchParams(window.location.search);
     const key = urlParams.get("key");
 
-    let response = { status: "error", message: "OK" };
+    let response = { status: "error", message: "NOK" };
 
     if (key && validKeys.includes(key)) {
-        response = { status: "ok", message: "NOK" };
+        response = { status: "ok", message: "OK" };
     }
 
     // Responder con JSON en la página sin mostrar contenido visual
