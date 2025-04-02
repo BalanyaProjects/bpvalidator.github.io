@@ -12,5 +12,6 @@ window.onload = function() {
     }
 
     // Escribir la respuesta en el cuerpo del documento
-    document.body.innerText = JSON.stringify(response);
+    const resultDiv = document.getElementById("validationResult");
+    resultDiv.innerText = JSON.stringify(response);
 };
