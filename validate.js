@@ -6,9 +6,9 @@ function validateKey() {
     let resultText = document.getElementById("result");
 
     if (validKeys.includes(key)) {
-        resultText.innerHTML = "<span style='color:green;'>Acceso permitido</span>";
+        resultText.innerHTML = "<span style='color:green;'>OK</span>";
     } else {
-        resultText.innerHTML = "<span style='color:red;'>Acceso denegado</span>";
+        resultText.innerHTML = "<span style='color:red;'>NOK</span>";
     }
 }
 
