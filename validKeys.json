@@ -3,13 +3,13 @@
         {
             "key": "401A583A8060",
             "description": "PC feina",
-            "expires": "2035-01-01",
+            "expires": "2040-01-01",
             "status": "active"
         },
         {
             "key": "6A97573FC3A5",
-            "description": "Alguer",
-            "expires": "2040-01-02",
+            "description": "Alguer portatil",
+            "expires": "2040-01-01",
             "status": "active"
         }
     ]
