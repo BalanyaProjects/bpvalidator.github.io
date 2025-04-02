@@ -1,4 +1,4 @@
-// Lista de claves permitidas (simulación de base de datos en el cliente)
+// Lista de claves permitidas
 const validKeys = ["ABC123", "DEF456"];
 
 window.onload = function() {
@@ -11,6 +11,6 @@ window.onload = function() {
         response = { status: "ok", message: "OK" };
     }
 
-    // Responder con JSON en la página sin mostrar contenido visual
+    // Escribir la respuesta en el cuerpo del documento
     document.body.innerText = JSON.stringify(response);
 };
