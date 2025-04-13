@@ -13,6 +13,12 @@
             "status": "active"
         },
         {
+            "key": "D43D7E460727",
+            "description": "Juan PC fix",
+            "expires": "2040-01-01",
+            "status": "active"
+        },
+        {
             "key": "6A97573FC3A5",
             "description": "Alguer portatil",
             "expires": "2040-01-01",
